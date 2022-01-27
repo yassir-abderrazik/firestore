@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <div class=" bg-slate-50 flex justify-center items-center w-full">
+        <form>
+            <div class=" px-10 py-8 rounded-xl w-full shadow-md ">
+                <p class=" text-center overline font-bold  text-pink-600 text-4xl m-10">Anime</p>
+                <div class="space-y-4">
+                    <div>
+                        <label for="email" class="block mb-1 text-gray-600 font-semibold">name Anime</label>
+                        <input type="text" id="animeName" class="bg-indigo-50 px-4 py-2  m-4 outline-none rounded-md w-full" />
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-1 text-gray-600 font-semibold">story</label>
+                        <input type="text"  id="animeStory" class="bg-indigo-50 px-4 py-2 m-4 outline-none rounded-md w-full" />
+                    </div>
+                    <a class="m-4 p-2  bg-yellow-500 font-semibold py-2 rounded-md " onclick="addNewAnime()">ADD</a>
+                    <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0">
+                        <div class="pt-6 md:p-8 text-center space-y-4" id="addNewAnime">
+                            
+                           
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script>
+    // Import the functions you need from the SDKs you need
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: ""
+    };
+
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+    const anime = firebase.firestore().collection('anime');
+  
+</script>
+    <script src="./main.js"></script>
+</html>
